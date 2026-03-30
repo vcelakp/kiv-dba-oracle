@@ -18,7 +18,7 @@ and then run `docker login container-registry.oracle.com`.
 ### Prepare, start and stop Docker container
 
 File `.env` is already prepared. Still, you can modify it or use its template
-(`cp .env.example .env`).
+(`cp .env.template .env`).
 
 - `scripts/recreate-from-scratch.sh` - prepare Docker image and environment;
 
