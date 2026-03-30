@@ -1,0 +1,21 @@
+services:
+  oracle:
+    image: ${IMAGE:-container-registry.oracle.com/database/express:latest}
+    container_name: ${CONTAINER_NAME:-oracle-xe-examples}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-1521}:1521"
+      - "${HOST_EM_PORT:-5500}:5500"
+    environment:
+      ORACLE_PWD: ${ORACLE_PWD:-Oracle2026}
+      EXAMPLE_PDB: ${EXAMPLE_PDB:-XEPDB1}
+      EXAMPLE_USER: ${EXAMPLE_USER:-STUDENT}
+      EXAMPLE_USER_PASSWORD: ${EXAMPLE_USER_PASSWORD:-Student2026}
+    volumes:
+      - oracle_data:/opt/oracle/oradata
+      - ./db-setup:/opt/oracle/scripts/setup:ro
+      - ./db-startup:/opt/oracle/scripts/startup:ro
+      - ./:/workspace:ro
+
+volumes:
+  oracle_data:
