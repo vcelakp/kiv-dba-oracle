@@ -1,4 +1,5 @@
-# Database Applications (KIV/DBA): Oracle Database examples and Docker-based environment for KIV/DBA
+
+# Database Applications (KIV/DBA): Docker-based environment and Oracle Database examples for KIV/DBA
 
 This set of scripts starts Oracle XE in Docker and allows you to run individual
 SQL examples interactively.
