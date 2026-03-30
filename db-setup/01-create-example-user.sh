@@ -9,6 +9,7 @@ echo "Creating example user ${APP_USER} in PDB ${PDB_NAME} ..."
 
 sqlplus -s / as sysdba <<SQL
 WHENEVER SQLERROR EXIT SQL.SQLCODE
+PROMPT Create new user ${APP_USER} in PDB ${PDB_NAME}.
 
 ALTER SESSION SET CONTAINER=${PDB_NAME};
 

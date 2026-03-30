@@ -9,7 +9,7 @@ ROOT_DIR="$(project_root)"
 
 list_candidates() {
   {
-    find "$ROOT_DIR/examples" -maxdepth 1 -type f -name '*.sql' 2>/dev/null
+    find "$ROOT_DIR/examples" -maxdepth 2 -type f -name '*.sql' 2>/dev/null
     find "$ROOT_DIR" -maxdepth 1 -type f -name '*.sql' 2>/dev/null
   } | awk '!seen[$0]++' | sort
 }
@@ -35,5 +35,7 @@ if [[ ! "$choice" =~ ^[0-9]+$ ]] || (( choice < 1 || choice > ${#FILES[@]} )); t
   exit 1
 fi
 
+
 selected="${FILES[$((choice - 1))]}"
+print_header "$choice" "$selected"
 "$SCRIPT_DIR/run-example.sh" "$selected"

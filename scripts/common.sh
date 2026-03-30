@@ -46,3 +46,18 @@ container_running() {
 project_root() {
   printf '%s\n' "$ROOT_DIR"
 }
+
+print_header() {
+  local choice="$1"
+  local selected="$2"
+
+  printf '\n'
+  printf '%s\n' '======================================================================'
+  printf '%s\n' ' Database Applications (KIV/DBA): Oracle Database PL/SQL Examples     '
+  printf '%s\n' '----------------------------------------------------------------------'
+  printf ' %-14s %s\n' "Menu choice:" "$choice"
+  printf ' %-14s %s\n' "Example file:" "$selected"
+  printf '%s\n' '======================================================================'
+  printf '\n'
+}
+

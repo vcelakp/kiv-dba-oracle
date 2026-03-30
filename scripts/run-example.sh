@@ -44,5 +44,5 @@ if ! container_running; then
 fi
 "$SCRIPT_DIR/wait-until-ready.sh"
 
-echo "Running $REL_PATH"
+print_header "-" "$REL_PATH"
 docker exec -i "$CONTAINER_NAME" bash -lc "sqlplus -L '${EXAMPLE_USER}/${EXAMPLE_USER_PASSWORD}@${EXAMPLE_PDB}' '@${CONTAINER_FILE}'"
