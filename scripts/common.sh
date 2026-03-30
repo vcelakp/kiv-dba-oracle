@@ -55,7 +55,6 @@ print_header() {
   printf '%s\n' '======================================================================'
   printf '%s\n' ' Database Applications (KIV/DBA): Oracle Database PL/SQL Examples     '
   printf '%s\n' '----------------------------------------------------------------------'
-  printf ' %-14s %s\n' "Menu choice:" "$choice"
   printf ' %-14s %s\n' "Example file:" "$selected"
   printf '%s\n' '======================================================================'
   printf '\n'

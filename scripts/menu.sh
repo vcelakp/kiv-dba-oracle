@@ -35,7 +35,5 @@ if [[ ! "$choice" =~ ^[0-9]+$ ]] || (( choice < 1 || choice > ${#FILES[@]} )); t
   exit 1
 fi
 
-
 selected="${FILES[$((choice - 1))]}"
-print_header "$choice" "$selected"
 "$SCRIPT_DIR/run-example.sh" "$selected"
