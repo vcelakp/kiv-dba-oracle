@@ -14,6 +14,18 @@ SQL examples interactively.
 via the web interface, accept the license terms for the relevant repository,
 and then run `docker login container-registry.oracle.com`.
 
+## Examples
+
+Examples are primarily stored in the `./examples/` directory.
+
+- [Oracle Database PL/SQL Examples](examples/plsql/README.md)
+- Oracle Object-Relational Database Examples
+
+The interactive menu (`scripts/menu.sh`) also searches for .sql files in the
+project root, so that you can place your own examples directly next to
+docker-compose.yml as well.
+
+
 ## Usage
 
 ### Prepare, start and stop Docker container
@@ -23,7 +35,8 @@ File `.env` is already prepared. Still, you can modify it or use its template
 
 - `scripts/recreate-from-scratch.sh` - prepare Docker image and environment;
 
-- `scripts/start.sh` - starts the container and waits until the database is ready;
+- `scripts/start.sh` - starts the container and waits until the database is
+  ready;
 
 - `scripts/stop.sh` - stops the container;
 
@@ -68,13 +81,6 @@ File `.env` is already prepared. Still, you can modify it or use its template
   ```bash
   ./scripts/stop.sh
   ```
-
-## Examples
-
-Examples are primarily stored in the ./examples/ directory.
-
-The interactive menu also searches for .sql files in the project root, so that
-you can place your own examples directly next to docker-compose.yml as well.
 
 ## Notes
 
