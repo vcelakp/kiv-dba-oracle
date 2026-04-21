@@ -18,8 +18,11 @@ and then run `docker login container-registry.oracle.com`.
 
 Examples are primarily stored in the `./examples/` directory.
 
-- [Oracle Database PL/SQL Examples](examples/plsql/README.md)
-- Oracle Object-Relational Database Examples
+- Data Dictionary
+- Query Optimization
+- Hierarchical Queries
+- [Oracle Database PL/SQL Examples](examples/04-plsql/README.md)
+- [Oracle Object-Relational Database Examples](examples/05-object/README.md)
 
 The interactive menu (`scripts/menu.sh`) also searches for .sql files in the
 project root, so that you can place your own examples directly next to
