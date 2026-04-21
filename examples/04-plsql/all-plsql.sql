@@ -1,4 +1,4 @@
--- all.sql
+-- all-plsql.sql
 --
 -- Goal:
 --   Run all Oracle PL/SQL examples.
@@ -6,7 +6,7 @@
 SET SERVEROUTPUT ON
 
 PROMPT ##################################################
-PROMPT === all.sql                                    ===
+PROMPT === all-plsql.sql                              ===
 PROMPT ##################################################
 
 
@@ -158,5 +158,5 @@ PROMPT ##################################################
 @@99-cleanup.sql
 
 PROMPT ##################################################
-PROMPT === DONE all.sql                               ===
+PROMPT === DONE all-plsql.sql                         ===
 PROMPT ##################################################
